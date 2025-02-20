@@ -117,9 +117,9 @@
     <joint name="${prefix}axis_d" type="revolute">
       <parent link="${prefix}m2_1_1_link" />
       <child link="${prefix}m2_joint_link" />
-      <origin xyz="-0.02 0 0.033" />
+      <origin xyz="-0.02 0 0.033" rpy="0.0 -1.571 0.0" />
       <axis xyz="0 1 0" />
-      <limit effort="9.0" lower="0.0" upper="3.49" velocity="0.5" />
+      <limit effort="9.0" lower="1.571" upper="4.713" velocity="0.5" />
     </joint>
 
     <link name="${prefix}m2_1_2_link">
