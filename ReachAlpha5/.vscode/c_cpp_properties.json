@@ -1,0 +1,23 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/newtonjeri/ros2_work_ws/ReachAlpha5Arm/install/thruster_hardware/include/**",
+        "/home/newtonjeri/ros2_work_ws/ReachAlpha5Arm/install/ardusub_manager/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/newtonjeri/ros2_work_ws/ReachAlpha5Arm/src/ReachAlpha5/ardusub_driver/thruster_hardware/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
