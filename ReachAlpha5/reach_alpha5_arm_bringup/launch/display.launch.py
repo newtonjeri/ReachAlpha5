@@ -61,12 +61,12 @@ def generate_launch_description() -> LaunchDescription:
     args = [
         DeclareLaunchArgument(
             "use_sim",
-            default_value="false",
+            default_value="true",
             description="Launch the Gazebo + ArduSub simulator.",
         ),
         DeclareLaunchArgument(
             "use_rviz",
-            default_value="false",
+            default_value="true",
             description="Launch RViz2.",
         ),
         DeclareLaunchArgument(
