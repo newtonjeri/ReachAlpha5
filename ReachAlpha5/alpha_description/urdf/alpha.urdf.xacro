@@ -44,14 +44,18 @@
         <geometry>
           <mesh filename="file://$(find alpha_description)/meshes/M3-INLINE.stl" />
         </geometry>
-        <origin rpy="0 0 0" xyz="0 0 0" />
+        <origin rpy="0 -1.57075 0" xyz="0.0 0.004 0.1225" />
         <material name="${prefix}black" />
       </visual>
       <collision>
-        <geometry>
+        <!-- <geometry>
           <cylinder length="0.150" radius="0.020" />
         </geometry>
-        <origin rpy="0 1.57075 0" xyz="-0.075 0 0" />
+        <origin rpy="0 1.57075 0" xyz="-0.075 0 0" /> -->
+        <geometry>
+          <mesh filename="file://$(find alpha_description)/meshes/M3-INLINE.stl" />
+        </geometry>
+        <origin rpy="0 -1.57075 0" xyz="0.0 0.004 0.1225" />
       </collision>
       <inertial>
         <mass value="0.341" />
@@ -69,7 +73,7 @@
     <joint name="${prefix}mounting_plate_joint" type="fixed">
       <parent link="${prefix}mounting_plate" />
       <child link="${prefix}m3_inline_link" />
-      <origin xyz="0 -0.025 0.037" />
+      <origin xyz="0.0 -0.025 0.037" rpy="0 0 -1.57075"/>
     </joint>
     
     <link name="${prefix}m2_1_1_link">
@@ -97,9 +101,10 @@
       <parent link="${prefix}m3_inline_link" />
       <child link="${prefix}m2_1_1_link" />
       <!-- <origin xyz="0 0 0.014" /> -->
-      <origin xyz="0 0 0.15" rpy="0 -1.571 0"/>
+      <origin xyz="-0.0135 0.005 0.1225" rpy="0 1.57075 3.142"/>
       <axis xyz="0 0 1" />
-      <limit effort="9.0" lower="0.0" upper="6.10" velocity="0.5" />
+      <!-- <limit effort="9.0" lower="0.0" upper="6.10" velocity="0.5" /> -->
+      <limit effort="9.0" lower="-3.142" upper="3.142" velocity="0.5" />
     </joint>
 
     <link name="${prefix}m2_joint_link">
@@ -138,7 +143,9 @@
     <joint name="${prefix}axis_d" type="revolute">
       <parent link="${prefix}m2_1_1_link" />
       <child link="${prefix}m2_joint_link" />
-      <origin xyz="-0.02 0 0.033" rpy="0.0 0.0 0.0" />
+      <!-- <origin xyz="-0.02 0 0.033" rpy="0.0 0.0 0.0" /> -->
+      <origin xyz="-0.02 0 0.033" rpy="0.0 0.0 3.142" />
+
       <axis xyz="0 1 0" />
       <limit effort="9.0" lower="1.571" upper="4.713" velocity="0.5" />
     </joint>
