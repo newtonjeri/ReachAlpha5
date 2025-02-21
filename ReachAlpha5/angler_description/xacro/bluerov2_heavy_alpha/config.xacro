@@ -20,12 +20,12 @@
   <!-- Imports -->
   <xacro:include
     filename="$(find ${description_package})/xacro/bluerov2_heavy_alpha/urdf.xacro" />
-  <!-- <xacro:include
-    filename="$(find ${description_package})/xacro/bluerov2_heavy_alpha/ros2_control.xacro" /> -->
+  <xacro:include
+    filename="$(find ${description_package})/xacro/bluerov2_heavy_alpha/ros2_control.xacro" />
 
   <xacro:bluerov2_heavy_alpha_urdf
     prefix="${prefix}" />
-  <!-- <xacro:bluerov2_heavy_alpha_system
+  <xacro:bluerov2_heavy_alpha_system
     prefix="${prefix}alpha_"
     name="ReachAlpha5"
     serial_port="$(arg serial_port)"
@@ -33,7 +33,7 @@
     initial_positions_file="/bluerov2_heavy_alpha/$(arg initial_positions_file)"
     description_package="${description_package}"
     use_sim="${use_sim}"
-    use_fake_hardware="$(arg use_fake_hardware)" /> -->
+    use_fake_hardware="$(arg use_fake_hardware)" />
 
   <!-- Gazebo -->
   <xacro:if value="${use_sim}">
