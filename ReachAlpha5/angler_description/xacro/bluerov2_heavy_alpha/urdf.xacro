@@ -64,7 +64,13 @@
     </link>
 
     <joint name="${prefix}manipulator_mount_joint" type="fixed">
-      <origin rpy="0 0 0" xyz="0.24 -0.099 0.029" />
+      <!-- <origin rpy="0 0 0" xyz="0.24 -0.099 0.029" /> -->
+      <!-- Side Right -->
+      <origin rpy="1.57075 0.0 1.57075" xyz="0.1 -0.099 0.05" />
+      <!-- Centre -->
+      <!-- <origin rpy="1.57075 0.0 1.57075" xyz="0.1 0.0 0.05" /> -->
+      <!-- Side Left -->
+      <!-- <origin rpy="1.57075 0.0 1.57075" xyz="0.1 0.099 0.05" /> -->
       <parent link="${prefix}base_link" />
       <child link="${prefix}manipulator_mount_link" />
     </joint>
